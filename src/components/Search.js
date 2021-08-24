@@ -9,7 +9,10 @@ const Search = ({ handleSearchNote }) => {
             <input
                 type='text'
                 placeholder='type to search...'
-                onChange={(e) => handleSearchNote(e.target.value)}
+                onChange={(e) => {
+                    const search = e.target.value.toLowerCase();
+                    handleSearchNote(search);
+                }}
             />
         </div>
      );
